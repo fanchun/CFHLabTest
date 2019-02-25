@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setup];
+    [self resetSettings];
 }
 
 #pragma mark - Override
@@ -43,19 +43,21 @@
 
 #pragma mark - Private
 
-const NSInteger kDefaultOperant1Value = 0;
-const NSInteger kDefaultOperant2Value = 0;
+const NSInteger kDefaultOperant1Value = 50;
+const NSInteger kDefaultOperant2Value = 50;
+const NSInteger kSliderMinimumVlaue = 0;
+const NSInteger kSliderMaximumValue = 100;
 
-- (void)setup {
+- (void)resetSettings {
     self.title = @"加法計算器";
     
-    self.mOperand1Slider.minimumValue = 0;
-    self.mOperand1Slider.maximumValue = 100;
+    self.mOperand1Slider.minimumValue = kSliderMinimumVlaue;
+    self.mOperand1Slider.maximumValue = kSliderMaximumValue;
     self.mOperand1Slider.value = kDefaultOperant1Value;
     self.mOperand1Label.text = [NSString stringWithFormat:@"%ld", (NSInteger)round(self.mOperand1Slider.value)];
     
-    self.mOperand2Slider.minimumValue = 0;
-    self.mOperand2Slider.maximumValue = 100;
+    self.mOperand2Slider.minimumValue = kSliderMinimumVlaue;
+    self.mOperand2Slider.maximumValue = kSliderMaximumValue;
     self.mOperand2Slider.value = kDefaultOperant2Value;
     self.mOperand2Label.text = [NSString stringWithFormat:@"%ld", (NSInteger)round(self.mOperand2Slider.value)];
     

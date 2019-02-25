@@ -20,6 +20,7 @@
 		96D747492223909900BD007B /* CFHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D747452223909900BD007B /* CFHMainViewController.xib */; };
 		96D7474A2223909900BD007B /* CFHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D747452223909900BD007B /* CFHMainViewController.xib */; };
 		96D7474B2223909900BD007B /* CFHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D747452223909900BD007B /* CFHMainViewController.xib */; };
+		96E7FAD02223CF4900867744 /* CFHMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7FACF2223CF4900867744 /* CFHMainViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		96D747432223909900BD007B /* CFHMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFHMainViewController.h; sourceTree = "<group>"; };
 		96D747442223909900BD007B /* CFHMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHMainViewController.m; sourceTree = "<group>"; };
 		96D747452223909900BD007B /* CFHMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CFHMainViewController.xib; sourceTree = "<group>"; };
+		96E7FACF2223CF4900867744 /* CFHMainViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHMainViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				96D7472422238F2700BD007B /* CFHLabTestTests.m */,
 				96D7472622238F2700BD007B /* Info.plist */,
+				96E7FACF2223CF4900867744 /* CFHMainViewControllerTests.m */,
 			);
 			path = CFHLabTestTests;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D7472522238F2700BD007B /* CFHLabTestTests.m in Sources */,
+				96E7FAD02223CF4900867744 /* CFHMainViewControllerTests.m in Sources */,
 				96D747472223909900BD007B /* CFHMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
