@@ -32,15 +32,19 @@
 
 - (void)testAdd {
     NSInteger result = [self.mainVC addOperandValue1:3 andOperandValue2:5];
-    XCTAssert(result == 8);
+    XCTAssertEqual(result, 8, @"The result of add calculation is wrong!");
+    //XCTAssert(result == 8, @"the result of add caculating is wrong!");
 }
 
 - (void)testUpdateLabels {
     UIView *view = self.mainVC.view; // 載入畫面的元件和方法
     [self.mainVC updateLabelsWithOperand1Value:12 operand2Value:10 result:22];
-    XCTAssert([self.mainVC.mOperand1Label.text isEqualToString:@"12"], @"operantLabel1 display error!");
-    XCTAssert([self.mainVC.mOperand2Label.text isEqualToString:@"10"], @"operantLabel2 display error!");
-    XCTAssert([self.mainVC.mResultLabel.text isEqualToString:@"計算結果: 22"], @"resultLabel display error!");
+    XCTAssertEqualObjects(self.mainVC.mOperand1Label.text, @"12", @"Operand1Label displays wrong value!");
+    XCTAssertEqualObjects(self.mainVC.mOperand2Label.text, @"10", @"Operand2Label displays wrong value!");
+    XCTAssertEqualObjects(self.mainVC.mResultLabel.text, @"計算結果: 22", @"ResultLabel displays wrong value!");
+//    XCTAssert([self.mainVC.mOperand1Label.text isEqualToString:@"12"], @"operantLabel1 display error!");
+//    XCTAssert([self.mainVC.mOperand2Label.text isEqualToString:@"10"], @"operantLabel2 display error!");
+//    XCTAssert([self.mainVC.mResultLabel.text isEqualToString:@"計算結果: 22"], @"resultLabel display error!");
 }
 
 
