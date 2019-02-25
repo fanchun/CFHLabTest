@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CFHMainViewController">
+            <connections>
+                <outlet property="mOperand1Label" destination="dqY-QH-mdY" id="JrR-tN-OPV"/>
+                <outlet property="mOperand1Slider" destination="BzY-Eq-3CD" id="SUW-Kg-0mp"/>
+                <outlet property="mOperand2Label" destination="4xT-qR-6z9" id="2iC-Vi-60f"/>
+                <outlet property="mOperand2Slider" destination="Y7T-Nk-MhG" id="ZBy-G5-VKe"/>
+                <outlet property="mResultLabel" destination="YiW-7w-hGV" id="SYF-Y4-Evs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-QH-mdY">
+                    <rect key="frame" x="39" y="117" width="296" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="mnG-lt-F7t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-Eq-3CD">
+                    <rect key="frame" x="37" y="80" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="Vli-ve-9cb"/>
+                    </constraints>
+                    <connections>
+                        <action selector="operandSliderChange:" destination="-1" eventType="valueChanged" id="ggC-zH-sFt"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-qR-6z9">
+                    <rect key="frame" x="39" y="230" width="296" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="fK0-Ja-nvd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-Nk-MhG">
+                    <rect key="frame" x="37" y="193" width="300" height="31"/>
+                    <connections>
+                        <action selector="operandSliderChange:" destination="-1" eventType="valueChanged" id="Aba-VO-tKL"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiW-7w-hGV">
+                    <rect key="frame" x="39" y="323" width="296" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="azK-t6-TSf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dqY-QH-mdY" firstAttribute="top" secondItem="BzY-Eq-3CD" secondAttribute="bottom" constant="8" id="4Ob-S6-y3F"/>
+                <constraint firstItem="Y7T-Nk-MhG" firstAttribute="top" secondItem="dqY-QH-mdY" secondAttribute="bottom" constant="55" id="4P3-gA-prT"/>
+                <constraint firstItem="4xT-qR-6z9" firstAttribute="trailing" secondItem="Y7T-Nk-MhG" secondAttribute="trailing" id="6vb-wf-kak"/>
+                <constraint firstItem="YiW-7w-hGV" firstAttribute="top" secondItem="4xT-qR-6z9" secondAttribute="bottom" constant="72" id="7e9-Sw-SLz"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" constant="40" id="AAB-SX-M2B"/>
+                <constraint firstItem="BzY-Eq-3CD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="39" id="Iiv-qy-7wY"/>
+                <constraint firstItem="YiW-7w-hGV" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" id="Npq-x8-fgU"/>
+                <constraint firstItem="BzY-Eq-3CD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="Pae-uv-zqJ"/>
+                <constraint firstItem="dqY-QH-mdY" firstAttribute="leading" secondItem="BzY-Eq-3CD" secondAttribute="leading" id="ahI-mg-2z2"/>
+                <constraint firstItem="4xT-qR-6z9" firstAttribute="top" secondItem="Y7T-Nk-MhG" secondAttribute="bottom" constant="7" id="fez-zh-PsY"/>
+                <constraint firstItem="dqY-QH-mdY" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" id="m02-tz-Ls1"/>
+                <constraint firstItem="4xT-qR-6z9" firstAttribute="leading" secondItem="Y7T-Nk-MhG" secondAttribute="leading" id="o0v-5R-MaE"/>
+                <constraint firstItem="YiW-7w-hGV" firstAttribute="leading" secondItem="BzY-Eq-3CD" secondAttribute="leading" id="pQu-Az-M9a"/>
+                <constraint firstItem="Y7T-Nk-MhG" firstAttribute="leading" secondItem="BzY-Eq-3CD" secondAttribute="leading" id="ybp-80-fWE"/>
+                <constraint firstItem="Y7T-Nk-MhG" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" id="yx8-W8-emh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>
