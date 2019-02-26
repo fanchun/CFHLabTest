@@ -50,35 +50,28 @@
 - (IBAction)loginButtonPress:(id)sender {
     NSInteger pwd1 = (NSInteger)round(self.mOperand1Slider.value);
     NSInteger pwd2 = (NSInteger)round(self.mOperand2Slider.value);
-    NSString *errorMsg = [self loginVerificationWithPWD1:pwd1 andPWD2:pwd2];
-    if (errorMsg) {
-        [self showAlertWithMessage:errorMsg];
-    }
-    else {
+    if ([self loginVerificationWithPWD1:pwd1 andPWD2:pwd2]) {
         [self gotoSecondVC];
+    }else {
+        [self showAlertWithMessage:@"Wrong Password!"];
     }
 }
 #pragma mark - Private
 
-const NSInteger kDefaultOperant1Value = 0;
-const NSInteger kDefaultOperant2Value = 0;
-const NSInteger kSliderMinimumVlaue = 0;
-const NSInteger kSliderMaximumValue = 10;
-
 - (void)resetSettings {
-    self.mOperand1Slider.minimumValue = kSliderMinimumVlaue;
-    self.mOperand1Slider.maximumValue = kSliderMaximumValue;
-    self.mOperand1Slider.value = kDefaultOperant1Value;
+    self.mOperand1Slider.minimumValue = CFHMainVCSliderMinimumVlaue;
+    self.mOperand1Slider.maximumValue = CFHMainVCSliderMaximumValue;
+    self.mOperand1Slider.value = CFHMainVCDefaultOperant1Value;
     self.mOperand1Label.text = [NSString stringWithFormat:@"%ld", (NSInteger)round(self.mOperand1Slider.value)];
     
-    self.mOperand2Slider.minimumValue = kSliderMinimumVlaue;
-    self.mOperand2Slider.maximumValue = kSliderMaximumValue;
-    self.mOperand2Slider.value = kDefaultOperant2Value;
+    self.mOperand2Slider.minimumValue = CFHMainVCSliderMinimumVlaue;
+    self.mOperand2Slider.maximumValue = CFHMainVCSliderMaximumValue;
+    self.mOperand2Slider.value = CFHMainVCDefaultOperant2Value;
     self.mOperand2Label.text = [NSString stringWithFormat:@"%ld", (NSInteger)round(self.mOperand2Slider.value)];
     
-    [self updateLabelsWithOperand1Value:kDefaultOperant1Value
-                          operand2Value:kDefaultOperant2Value
-                                 result:[self addOperandValue1:kDefaultOperant1Value andOperandValue2:kDefaultOperant2Value]];
+    [self updateLabelsWithOperand1Value:CFHMainVCDefaultOperant1Value
+                          operand2Value:CFHMainVCDefaultOperant2Value
+                                 result:[self addOperandValue1:CFHMainVCDefaultOperant1Value andOperandValue2:CFHMainVCDefaultOperant2Value]];
 }
 
 #pragma mark - Public
@@ -108,16 +101,8 @@ const NSInteger kSliderMaximumValue = 10;
 const NSInteger kUserPWD1 = 3;
 const NSInteger kUserPWD2 = 5;
 
-- (NSString *)loginVerificationWithPWD1:(NSInteger)pwd1 andPWD2:(NSInteger)pwd2 {
-    if (pwd1 == kUserPWD1 || pwd2 == kUserPWD2) {
-        return nil;
-    }
-    if (pwd1 == kDefaultOperant1Value && pwd2 == kDefaultOperant2Value) {
-        return @"Please select password!";
-    }
-    else {
-        return @"Wrong password!";
-    }
+- (BOOL)loginVerificationWithPWD1:(NSInteger)pwd1 andPWD2:(NSInteger)pwd2 {
+    return (pwd1 == kUserPWD1 && pwd2 == kUserPWD2);
 }
 
 - (void)gotoSecondVC {
