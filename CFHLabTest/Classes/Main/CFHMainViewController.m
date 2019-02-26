@@ -7,6 +7,7 @@
 //
 
 #import "CFHMainViewController.h"
+#import "CFHSecondViewController.h"
 
 @interface CFHMainViewController ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"登入";
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self resetSettings];
 }
 
@@ -41,6 +47,17 @@
                                  result:result];
 }
 
+- (IBAction)loginButtonPress:(id)sender {
+    NSInteger pwd1 = (NSInteger)round(self.mOperand1Slider.value);
+    NSInteger pwd2 = (NSInteger)round(self.mOperand2Slider.value);
+    NSString *errorMsg = [self loginVerificationWithPWD1:pwd1 andPWD2:pwd2];
+    if (errorMsg) {
+        [self showAlertWithMessage:errorMsg];
+    }
+    else {
+        [self gotoSecondVC];
+    }
+}
 #pragma mark - Private
 
 const NSInteger kDefaultOperant1Value = 0;
@@ -49,8 +66,6 @@ const NSInteger kSliderMinimumVlaue = 0;
 const NSInteger kSliderMaximumValue = 10;
 
 - (void)resetSettings {
-    self.title = @"加法計算器";
-    
     self.mOperand1Slider.minimumValue = kSliderMinimumVlaue;
     self.mOperand1Slider.maximumValue = kSliderMaximumValue;
     self.mOperand1Slider.value = kDefaultOperant1Value;
@@ -76,6 +91,39 @@ const NSInteger kSliderMaximumValue = 10;
     self.mOperand1Label.text = [NSString stringWithFormat:@"%ld", value1];
     self.mOperand2Label.text = [NSString stringWithFormat:@"%ld", value2];
     self.mResultLabel.text = [NSString stringWithFormat:@"計算結果: %ld", result];
+}
+
+- (void)showAlertWithMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@""
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:nil];
+    [alert addAction:confirmAction];
+    [self presentViewController:alert
+                       animated:YES completion:nil];
+}
+
+const NSInteger kUserPWD1 = 3;
+const NSInteger kUserPWD2 = 5;
+
+- (NSString *)loginVerificationWithPWD1:(NSInteger)pwd1 andPWD2:(NSInteger)pwd2 {
+    if (pwd1 == kUserPWD1 || pwd2 == kUserPWD2) {
+        return nil;
+    }
+    if (pwd1 == kDefaultOperant1Value && pwd2 == kDefaultOperant2Value) {
+        return @"Please select password!";
+    }
+    else {
+        return @"Wrong password!";
+    }
+}
+
+- (void)gotoSecondVC {
+    NSLog(@"go to secondVC!");
+    CFHSecondViewController *secondVC = [[CFHSecondViewController alloc] initWithNibName:NSStringFromClass([CFHSecondViewController class]) bundle:nil];
+    [self.navigationController pushViewController:secondVC animated:YES];
 }
 
 @end

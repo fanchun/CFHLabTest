@@ -31,10 +31,6 @@
 }
 
 - (void)testOperand1Slider {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [[[[[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"\u52a0\u6cd5\u8a08\u7b97\u5668"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeSlider] matchingIdentifier:@"50%"] elementBoundByIndex:0] pressForDuration:3.2];
-    /*@START_MENU_TOKEN@*/[app.sliders[@"50%"] pressForDuration:3.2];/*[["app.sliders[@\"50%\"]","["," tap];"," pressForDuration:3.2];"],[[[-1,0,1]],[[1,3],[1,2]]],[0,0]]@END_MENU_TOKEN@*/
-    
 }
 
 @end

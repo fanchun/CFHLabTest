@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *mOperand1Label;
 @property (weak, nonatomic) IBOutlet UILabel *mOperand2Label;
 @property (weak, nonatomic) IBOutlet UILabel *mResultLabel;
+@property (weak, nonatomic) IBOutlet UIButton *mLoginButton;
 
 - (NSInteger)addOperandValue1:(NSInteger)value1 andOperandValue2:(NSInteger)value2;
 - (void)updateLabelsWithOperand1Value:(NSInteger)value1 operand2Value:(NSInteger)value2 result:(NSInteger)result;

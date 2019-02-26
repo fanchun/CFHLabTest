@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CFHMainViewController">
             <connections>
+                <outlet property="mLoginButton" destination="CMs-SE-DlA" id="nRQ-B9-Yjm"/>
                 <outlet property="mOperand1Label" destination="dqY-QH-mdY" id="JrR-tN-OPV"/>
                 <outlet property="mOperand1Slider" destination="BzY-Eq-3CD" id="SUW-Kg-0mp"/>
                 <outlet property="mOperand2Label" destination="4xT-qR-6z9" id="2iC-Vi-60f"/>
@@ -66,15 +67,27 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-SE-DlA">
+                    <rect key="frame" x="39" y="374" width="296" height="30"/>
+                    <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="login"/>
+                    <connections>
+                        <action selector="loginButtonPress:" destination="-1" eventType="touchUpInside" id="zx2-n3-ryi"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="CMs-SE-DlA" firstAttribute="leading" secondItem="BzY-Eq-3CD" secondAttribute="leading" id="1Yf-rE-2XK"/>
                 <constraint firstItem="dqY-QH-mdY" firstAttribute="top" secondItem="BzY-Eq-3CD" secondAttribute="bottom" constant="8" id="4Ob-S6-y3F"/>
                 <constraint firstItem="Y7T-Nk-MhG" firstAttribute="top" secondItem="dqY-QH-mdY" secondAttribute="bottom" constant="55" id="4P3-gA-prT"/>
                 <constraint firstItem="4xT-qR-6z9" firstAttribute="trailing" secondItem="Y7T-Nk-MhG" secondAttribute="trailing" id="6vb-wf-kak"/>
                 <constraint firstItem="YiW-7w-hGV" firstAttribute="top" secondItem="4xT-qR-6z9" secondAttribute="bottom" constant="72" id="7e9-Sw-SLz"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" constant="40" id="AAB-SX-M2B"/>
+                <constraint firstItem="CMs-SE-DlA" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" id="IC0-h4-YCL"/>
                 <constraint firstItem="BzY-Eq-3CD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="39" id="Iiv-qy-7wY"/>
+                <constraint firstItem="CMs-SE-DlA" firstAttribute="top" secondItem="YiW-7w-hGV" secondAttribute="bottom" constant="30" id="Lis-zP-6Cv"/>
                 <constraint firstItem="YiW-7w-hGV" firstAttribute="trailing" secondItem="BzY-Eq-3CD" secondAttribute="trailing" id="Npq-x8-fgU"/>
                 <constraint firstItem="BzY-Eq-3CD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="Pae-uv-zqJ"/>
                 <constraint firstItem="dqY-QH-mdY" firstAttribute="leading" secondItem="BzY-Eq-3CD" secondAttribute="leading" id="ahI-mg-2z2"/>
