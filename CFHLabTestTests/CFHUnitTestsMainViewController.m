@@ -55,10 +55,10 @@
 
 - (void)testLoginVerification {
     [self measureBlock:^{
-        for (NSInteger pwd1 = 0; pwd1 <= 10; pwd1++) {
-            for (NSInteger pwd2 = 0; pwd2 <= 10; pwd2 ++) {
+        for (NSInteger pwd1 = CFHMainVCSliderMinimumVlaue; pwd1 <= CFHMainVCSliderMaximumValue; pwd1++) {
+            for (NSInteger pwd2 = CFHMainVCSliderMinimumVlaue; pwd2 <= CFHMainVCSliderMaximumValue; pwd2 ++) {
                 BOOL passVerification = [self.mainVC loginVerificationWithPWD1:pwd1 andPWD2:pwd2];
-                if (pwd1 == 3 && pwd2 == 5) {
+                if (pwd1 == CFHMainVCUserPWD1 && pwd2 == CFHMainVCUserPWD2) {
                     XCTAssertTrue(passVerification);
                 }
                 else {
