@@ -30,7 +30,25 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testOperand1Slider {
+- (void)testLoginFail {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.sliders[@"operand1Slider"] adjustToNormalizedSliderPosition:0.2];
+    [app.sliders[@"operand2Slider"] adjustToNormalizedSliderPosition:0.9];
+    sleep(1);
+    [app.buttons[@"login"] tap];
+    XCTAssert(app.alerts.staticTexts[@"Wrong Password!"].exists);
+    [app.alerts.buttons[@"Confirm"] tap];
+}
+
+- (void)testLoginSuccess {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.sliders[@"operand1Slider"] adjustToNormalizedSliderPosition:0.3];
+    [app.sliders[@"operand2Slider"] adjustToNormalizedSliderPosition:0.5];
+    sleep(1);
+    [app.buttons[@"login"] tap];
+    XCTAssert(app.navigationBars[@"簽到"].exists, @"Do not enter to login success screen");
+    [app.navigationBars[@"簽到"].buttons[@"登入"] tap];
+    XCTAssert(app.navigationBars[@"登入"].exists, @"Do not go back to Login screen.");
 }
 
 @end

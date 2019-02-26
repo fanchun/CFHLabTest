@@ -43,8 +43,8 @@
     XCTAssertEqualObjects(self.mainVC.mResultLabel.text, @"計算結果: 22", @"ResultLabel displays wrong value!");
 }
 
-- (void)testResetSettings {
-    [self.mainVC resetSettings];
+- (void)testGoBackResetSettings {
+    [self.mainVC viewWillAppear:YES];
     // Operand1
     XCTAssertEqual(self.mainVC.mOperand1Slider.value, 0, @"Operand1 Slider's value not reset!");
     XCTAssertEqualObjects(self.mainVC.mOperand1Label.text, @"0", @"Operand1 Label test not reset!");

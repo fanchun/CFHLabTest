@@ -26,7 +26,6 @@ extern const NSInteger CFHMainVCUserPWD2;
 @property (weak, nonatomic) IBOutlet UILabel *mResultLabel;
 @property (weak, nonatomic) IBOutlet UIButton *mLoginButton;
 
-- (void)resetSettings;
 - (NSInteger)addOperandValue1:(NSInteger)value1 andOperandValue2:(NSInteger)value2;
 - (void)updateLabelsWithOperand1Value:(NSInteger)value1 operand2Value:(NSInteger)value2 result:(NSInteger)result;
 - (BOOL)loginVerificationWithPWD1:(NSInteger)pwd1 andPWD2:(NSInteger)pwd2;
