@@ -8,7 +8,8 @@
 
 #import "CFHMainViewController.h"
 #import "CFHSecondViewController.h"
-
+const NSInteger CFHMainVCUserPWD1 = 3;
+const NSInteger CFHMainVCUserPWD2 = 5;
 @interface CFHMainViewController ()
 
 @end
@@ -98,11 +99,8 @@
                        animated:YES completion:nil];
 }
 
-const NSInteger kUserPWD1 = 3;
-const NSInteger kUserPWD2 = 5;
-
 - (BOOL)loginVerificationWithPWD1:(NSInteger)pwd1 andPWD2:(NSInteger)pwd2 {
-    return (pwd1 == kUserPWD1 && pwd2 == kUserPWD2);
+    return (pwd1 == CFHMainVCUserPWD1 && pwd2 == CFHMainVCUserPWD2);
 }
 
 - (void)gotoSecondVC {

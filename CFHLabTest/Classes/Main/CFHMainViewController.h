@@ -14,6 +14,8 @@ static const NSInteger CFHMainVCDefaultOperant1Value = 0;
 static const NSInteger CFHMainVCDefaultOperant2Value = 0;
 static const NSInteger CFHMainVCSliderMinimumVlaue = 0;
 static const NSInteger CFHMainVCSliderMaximumValue = 10;
+extern const NSInteger CFHMainVCUserPWD1;
+extern const NSInteger CFHMainVCUserPWD2;
 
 @interface CFHMainViewController : UIViewController
 
