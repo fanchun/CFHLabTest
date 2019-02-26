@@ -1,5 +1,5 @@
 //
-//  CFHMainViewControllerTests.m
+//  CFHUnitTestsMainViewController.m
 //  CFHLabTestTests
 //
 //  Created by cathaybk0218 on 2019/2/25.
@@ -9,13 +9,13 @@
 #import <XCTest/XCTest.h>
 #import "CFHMainViewController.h"
 
-@interface CFHMainViewControllerTests : XCTestCase
+@interface CFHUnitTestsMainViewController : XCTestCase
 
 @property (strong, nonatomic) CFHMainViewController *mainVC;
 
 @end
 
-@implementation CFHMainViewControllerTests
+@implementation CFHUnitTestsMainViewController
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,7 +33,6 @@
 - (void)testAdd {
     NSInteger result = [self.mainVC addOperandValue1:3 andOperandValue2:5];
     XCTAssertEqual(result, 8, @"The result of add calculation is wrong!");
-    //XCTAssert(result == 8, @"the result of add caculating is wrong!");
 }
 
 - (void)testUpdateLabels {
@@ -42,11 +41,6 @@
     XCTAssertEqualObjects(self.mainVC.mOperand1Label.text, @"12", @"Operand1Label displays wrong value!");
     XCTAssertEqualObjects(self.mainVC.mOperand2Label.text, @"10", @"Operand2Label displays wrong value!");
     XCTAssertEqualObjects(self.mainVC.mResultLabel.text, @"計算結果: 22", @"ResultLabel displays wrong value!");
-//    XCTAssert([self.mainVC.mOperand1Label.text isEqualToString:@"12"], @"operantLabel1 display error!");
-//    XCTAssert([self.mainVC.mOperand2Label.text isEqualToString:@"10"], @"operantLabel2 display error!");
-//    XCTAssert([self.mainVC.mResultLabel.text isEqualToString:@"計算結果: 22"], @"resultLabel display error!");
 }
-
-
 
 @end

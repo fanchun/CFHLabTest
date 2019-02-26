@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9659BF812223EC4400968E51 /* CFHUITestsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9659BF802223EC4400968E51 /* CFHUITestsMainViewController.m */; };
+		9659BF832223EC9900968E51 /* CFHUnitTestsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9659BF822223EC9900968E51 /* CFHUnitTestsMainViewController.m */; };
 		96D7470D22238F2500BD007B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D7470C22238F2500BD007B /* AppDelegate.m */; };
 		96D7471322238F2500BD007B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D7471122238F2500BD007B /* Main.storyboard */; };
 		96D7471522238F2700BD007B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7471422238F2700BD007B /* Assets.xcassets */; };
@@ -20,7 +22,6 @@
 		96D747492223909900BD007B /* CFHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D747452223909900BD007B /* CFHMainViewController.xib */; };
 		96D7474A2223909900BD007B /* CFHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D747452223909900BD007B /* CFHMainViewController.xib */; };
 		96D7474B2223909900BD007B /* CFHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D747452223909900BD007B /* CFHMainViewController.xib */; };
-		96E7FAD02223CF4900867744 /* CFHMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7FACF2223CF4900867744 /* CFHMainViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9659BF802223EC4400968E51 /* CFHUITestsMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHUITestsMainViewController.m; sourceTree = "<group>"; };
+		9659BF822223EC9900968E51 /* CFHUnitTestsMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHUnitTestsMainViewController.m; sourceTree = "<group>"; };
 		96D7470822238F2500BD007B /* CFHLabTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFHLabTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D7470B22238F2500BD007B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96D7470C22238F2500BD007B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		96D747432223909900BD007B /* CFHMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFHMainViewController.h; sourceTree = "<group>"; };
 		96D747442223909900BD007B /* CFHMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHMainViewController.m; sourceTree = "<group>"; };
 		96D747452223909900BD007B /* CFHMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CFHMainViewController.xib; sourceTree = "<group>"; };
-		96E7FACF2223CF4900867744 /* CFHMainViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFHMainViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,7 @@
 			children = (
 				96D7472422238F2700BD007B /* CFHLabTestTests.m */,
 				96D7472622238F2700BD007B /* Info.plist */,
-				96E7FACF2223CF4900867744 /* CFHMainViewControllerTests.m */,
+				9659BF822223EC9900968E51 /* CFHUnitTestsMainViewController.m */,
 			);
 			path = CFHLabTestTests;
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 			children = (
 				96D7472F22238F2700BD007B /* CFHLabTestUITests.m */,
 				96D7473122238F2700BD007B /* Info.plist */,
+				9659BF802223EC4400968E51 /* CFHUITestsMainViewController.m */,
 			);
 			path = CFHLabTestUITests;
 			sourceTree = "<group>";
@@ -302,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D7472522238F2700BD007B /* CFHLabTestTests.m in Sources */,
-				96E7FAD02223CF4900867744 /* CFHMainViewControllerTests.m in Sources */,
+				9659BF832223EC9900968E51 /* CFHUnitTestsMainViewController.m in Sources */,
 				96D747472223909900BD007B /* CFHMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D7473022238F2700BD007B /* CFHLabTestUITests.m in Sources */,
+				9659BF812223EC4400968E51 /* CFHUITestsMainViewController.m in Sources */,
 				96D747482223909900BD007B /* CFHMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

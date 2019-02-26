@@ -33,7 +33,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-Eq-3CD">
+                <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="operand1Slider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-Eq-3CD">
                     <rect key="frame" x="37" y="80" width="300" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="Vli-ve-9cb"/>
@@ -51,7 +51,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-Nk-MhG">
+                <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="operand2Slider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-Nk-MhG">
                     <rect key="frame" x="37" y="193" width="300" height="31"/>
                     <connections>
                         <action selector="operandSliderChange:" destination="-1" eventType="valueChanged" id="Aba-VO-tKL"/>

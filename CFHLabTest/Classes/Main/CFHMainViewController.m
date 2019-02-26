@@ -43,10 +43,10 @@
 
 #pragma mark - Private
 
-const NSInteger kDefaultOperant1Value = 50;
-const NSInteger kDefaultOperant2Value = 50;
+const NSInteger kDefaultOperant1Value = 0;
+const NSInteger kDefaultOperant2Value = 0;
 const NSInteger kSliderMinimumVlaue = 0;
-const NSInteger kSliderMaximumValue = 100;
+const NSInteger kSliderMaximumValue = 10;
 
 - (void)resetSettings {
     self.title = @"加法計算器";
